@@ -18,8 +18,17 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: 'Bungee'
 }
-
+main {
+  display: flex;
+  font-family: 'Source Sans 3', sans-serif;
+  border: 10px;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f4f1ec;
+  width: inherit;
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
