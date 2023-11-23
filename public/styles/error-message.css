@@ -1,0 +1,37 @@
+main.container > .error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 5px solid rgb(92, 8, 8);
+  border-radius: 5px;
+  width: 50%;
+  margin-bottom: 1.5rem;
+}
+
+
+
+.error {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-items: center;
+  justify-content: space-around;
+  font-family: 'Source Sans 3', sans-serif;
+  color: rgb(70, 0, 0);
+  background-color:rgba(250, 0, 0, 0.596)
+}
+ 
+.error-msg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem;
+}
+
+#error-symbol {
+  display: flex;
+  font-size: 5rem;
+  align-items: center;
+  color: red;
+  margin: 1.5rem;
+}

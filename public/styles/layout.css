@@ -24,11 +24,18 @@ main {
   display: flex;
   font-family: 'Source Sans 3', sans-serif;
   border: 10px;
-  align-items: center;
+  justify-content: center;
   flex-direction: column;
   background-color: #f4f1ec;
-  width: inherit;
+  margin: 1.5rem;
 }
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+  .master-container {
+    display: flex;
+  }
+  
+ @media screen and (min-width: 1024px) {
+
+ }

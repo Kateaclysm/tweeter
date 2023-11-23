@@ -1,12 +1,6 @@
-
-section.main-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 /*Overall article element for each tweet */
-article.container {
+
+article.tweet {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,42 +8,46 @@ article.container {
   color: black;
   outline: 3px solid rgb(32, 32, 32);
   height: 14rem;
-  width: 70%;
   position: relative;
+  margin: 1.5rem;
 }
+
 /* Hover event for the overall tweet*/
-article.container:hover {
+article.tweet:hover {
   box-shadow: 0 0 5px 5px grey;
 }
 
 /* This should contain the profile picture(?) as well as the name, and the @handle of the user*/
-header.tweet-header {
+article > header {
   display: flex;
-  position: absolute;
-  top: 0;
   flex-direction: row;
   align-self: flex-start;
+  align-items: center;
   margin: .5rem;
-  background-color: #fff;
   color: rgb(119, 100, 100);
 }
 
+article > header > img, article > header > h2, article > header > span {
+  margin: .2rem;
+
+}
+
 /*The "content" of the tweet, or whatever someone actually tweeted*/
-p.container {
+article > p {
   display: flex;
-  position: absolute;
   justify-content: flex-start;
   color: black;
   margin: 1.5rem;
   width: 95%;
-  height: adjust;
+  height: auto;
   border-bottom: 2px solid #1f1e1e;
 }
 
 /* Bottom of the tweet, should contain the symbols that have mouse-hover events. Retweet/like/etc. */
-footer.tweet-footer {
+article > footer {
   display: flex;
   align-self: flex-start;
+  align-items: center;
   flex-direction: row;
   color: black;
   position: absolute;
@@ -57,23 +55,24 @@ footer.tweet-footer {
   left: 0;
   margin: .5rem;
   font-size: medium;
+  width: 100%;
 }
 
 /* Div for grouping the icons*/
 div.icons {
   display: flex;
   position: absolute;
-  bottom: 0;
+  right: 0;
   flex-direction: row;
-  align-self: flex-end;
+  justify-self: flex-end;
   justify-content: space-between;
-  margin: .5rem;
+  margin: 1rem;
   font-size: medium;
 }
 
 /*The icon element*/
 
-i {
+#footer-icon {
   font-size: 20px;
   margin-left: .3rem;
   margin-right: .3rem;
@@ -81,10 +80,17 @@ i {
   margin-bottom: .1rem;
   font-size: medium;
   color: #4056A1;
-  outline: 1px solid red;
 }
 
 /* Hover event for the icons*/
-i:hover {
+#footer-icon:hover {
   color: #fabf2b;
+}
+
+
+@media screen and (min-width: 1024px) {
+  .overall-container{
+    display: flex;
+    flex-direction: column;
+  }
 }

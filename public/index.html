@@ -31,6 +31,9 @@
     <!-- Link to the stylesheet CSS file for the "tweet-layout" form-->
     <link rel="stylesheet" href="/styles/tweet-layout.css" type="text/css"/>
 
+    <!-- Link to the stylesheet CSS file for the "error-message" form-->
+    <link rel="stylesheet" href="/styles/error-message.css" type="text/css">
+
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -56,43 +59,48 @@
         <i class="fa-solid fa-angles-down" style="color: #d11f1f;"></i></span>
         </div>
     </nav>
+  <div class="master-container">
     <!-- Header -->
-    <header class="nav-header">
-      <div class="profile_picture">
-          <img src="/images/profile-hex.png"> 
+      <header class="nav-header">
+        <div class="profile_picture">
+            <img src="/images/profile-hex.png"> 
+        </div>
+        <br>
+        <div class="name_of_user">
+            <h2>Your Name</h2>
+        </div>
+      </header>
+      <div class="overall-container">
+      <main class="container">
+        <div class="error-container">
+          <section class="error">
+            <i class="fa-solid fa-triangle-exclamation" id="error-symbol"></i>
+            <h2 class="error-msg"></h2>
+          </section>
+        </div>
+      <section class="new-tweet">
+    <h2>Compose Tweet</h2>
+    <form class="textbox" id="new-tweet-submission" method="POST" action="/tweets/" >
+      <label for="tweet-text"></label>
+      <textarea name="text" id="tweet-text"></textarea>
+      <div>
+        <button class="tweet-button" type="submit">Tweet</button>
+        <output name="counter" class="counter" for="tweet-text">140</output>
       </div>
-      <br>
-      <div class="name_of_user">
-          <h2>Your Name</h2>
+    </form>
+  </section>
+      </main>
+      <section class="main-container">
+        <article class="container">
+            <header class="tweet-header"></header>
+            <p class="container">This is the tweet body</p>
+            <footer class="tweet-footer">This is footer text 
+            </footer>
+        </article>
+        </section>
       </div>
-  </header>
+  </div>
 
     <!-- Page-specific (main) content here -->
-    <main class="container">
-    <section class="new-tweet">
-  <h2>Compose Tweet</h2>
-  <form class="textbox" id="new-tweet-submission" method="POST" action="/tweets/" >
-    <label for="tweet-text"></label>
-    <textarea name="text" id="tweet-text"></textarea>
-    <div>
-      <button class="tweet-button" type="submit">Tweet</button>
-      <output name="counter" class="counter" for="tweet-text">140</output>
-    </div>
-  </form>
-</section>
-    </main>
-    <section class="main-container">
-      <article class="container">
-          <header class="tweet-header"> This is header text</header>
-          <p class="container">This is the tweet body</p>
-          <footer class="tweet-footer">This is footer text 
-          </footer>
-          <div class="icons">
-            <i class="fa-solid fa-flag" ></i>
-            <i class="fa-solid fa-retweet"> </i>
-            <i class="fa-solid fa-heart"> </i>
-            </div>
-      </article>
-      </section>
   </body>
 </html>
