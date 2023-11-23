@@ -21,4 +21,22 @@ This repository is the starter code for the project: Students will fork and clon
 - md5 2.1.0 or above
 
 
-## Screenshots: 
+## Screenshots:
+<details>
+  <summary>Screenshots of various aspects of the app </summary>
+  
+### Desktop Orientation:
+<img src="https://github.com/Kateaclysm/tweeter/blob/master/docs/Desktop%20Orientation.png?raw=true" width=50% height=50%>
+
+### Smartphone Orientation:
+<img src="https://github.com/Kateaclysm/tweeter/blob/master/docs/phone%20orientation.png?raw=true" width=50% height=50%>
+
+### Desktop Error:
+<img src="https://github.com/Kateaclysm/tweeter/blob/master/docs/Desktop%20Error.png?raw=true" width=50% height=50%>
+
+### Mobile Error:
+<img src="https://github.com/Kateaclysm/tweeter/blob/master/docs/mobile%20error.png?raw=true" width=50% height=50%>
+
+### Character limit error + over character limit character counter: 
+<img src="https://github.com/Kateaclysm/tweeter/blob/master/docs/over%20text%20limit.png?raw=true">
+</details>
