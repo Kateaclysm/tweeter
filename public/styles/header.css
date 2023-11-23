@@ -6,6 +6,7 @@
   width: auto;
   background-color: #fabf2b;
   border-radius: 5px;
+  padding-top: 1.5rem;
 }
 
 
@@ -25,9 +26,11 @@
 @media screen and (min-width: 1024px) {
 .nav-header {
    display: flex;
+   margin-top: 150px;
    width: 45%;
-   height: 45rem;
-   justify-content: flex-end;
-   justify-self: flex-end;
+   margin-left: 1.5rem;
+   justify-content: center;
+   margin-right: 6.5rem;
+   margin-bottom: 15.5rem;
   }
  }; 

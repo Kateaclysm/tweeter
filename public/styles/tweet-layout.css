@@ -92,5 +92,6 @@ div.icons {
   .overall-container{
     display: flex;
     flex-direction: column;
+    padding-top: 6.5rem;
   }
 }
