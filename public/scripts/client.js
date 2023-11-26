@@ -80,9 +80,6 @@ $(document).ready(function() {
       $('#new-tweet-submission')[0].reset();
       return;
     }
-    console.log(textLength);
-    console.log("inside submit event handler", event.target);
-    console.log("serialized form values:", $(event.target).serialize());
 
     $.ajax({
       method: "POST",
