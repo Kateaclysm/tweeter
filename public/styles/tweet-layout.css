@@ -26,6 +26,10 @@ article > header {
   margin: .5rem;
   color: rgb(119, 100, 100);
 }
+article > header > span {
+  position: absolute;
+  right: 1.5rem;
+}
 
 article > header > img, article > header > h2, article > header > span {
   margin: .2rem;

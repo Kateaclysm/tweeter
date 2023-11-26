@@ -29,6 +29,11 @@ main {
   background-color: #f4f1ec;
   margin: 1.5rem;
 }
+
+.main-container {
+  display: flex;
+  flex-direction:column-reverse;
+ }
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

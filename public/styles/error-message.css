@@ -32,6 +32,6 @@ main.container > .error-container {
   display: flex;
   font-size: 5rem;
   align-items: center;
-  color: red;
+  color: #ff0000;
   margin: 1.5rem;
 }

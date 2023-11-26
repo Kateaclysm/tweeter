@@ -13,6 +13,11 @@ textarea {
   background-color: #f4f1ec;
   resize: none;
 }
+
+#tweet-text {
+  overflow: hidden;
+}
+
 .textbox {
   display: flex;
   flex-direction: column;
