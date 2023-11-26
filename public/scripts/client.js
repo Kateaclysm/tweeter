@@ -46,7 +46,9 @@ $(document).ready(function() {
 
   const renderTweets = function(tweets) {
     // Empty the container first!
+    
     $('.main-container').empty();
+
 
     //Loop through the array of tweets!
     for (let tweet of tweets) {
@@ -54,18 +56,28 @@ $(document).ready(function() {
       $('.main-container').append($tweet);
     }
   };
+  
   /* Error handling code as well as submission handling */
   $('#new-tweet-submission').on("submit", function(event) {
     event.preventDefault();
+    // Slide up the error text box if submit is pressed
+    $("main.container > .error-container").slideUp();
     let textLength = $('#tweet-text').val().length;
+    
     if (!$('#tweet-text').val()) {
       event.preventDefault();
+      // If the field is empty when you hit submit... error message and "clear" the field again...
       $("main.container > .error-container").slideDown();
       $("h2.error-msg").text("You can't send a blank tweet!");
+      $('#new-tweet-submission')[0].reset();
+      return;
     };
     if (textLength > 140) {
       event.preventDefault();
+      // If the text length is > 140 when you hit submit, erase the field
       $(".error-msg").text("You can't send a tweet containing over 140 characters!");
+      $("main.container > .error-container").slideDown();
+      $('#new-tweet-submission')[0].reset();
       return;
     }
     console.log(textLength);
@@ -88,6 +100,7 @@ $(document).ready(function() {
       url: "/tweets",
       success: (parameter) => {
         console.log("tweet successfully created!", renderTweets(parameter));
+        $('#new-tweet-submission')[0].reset();
       },
     });
   };
