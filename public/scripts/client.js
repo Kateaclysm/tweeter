@@ -63,25 +63,17 @@ $(document).ready(function() {
     // Slide up the error text box if submit is pressed
     $("main.container > .error-container").slideUp();
     let textLength = $('#tweet-text').val().length;
-    // Reset counter upon submission
-    let counterElement = $('#tweet-text').siblings("div").children(".counter");
-      counterElement.text("140");
     if (!$('#tweet-text').val()) {
       event.preventDefault();
-      // If the field is empty when you hit submit... error message and "clear" the field again...
       $("main.container > .error-container").slideDown();
       $("h2.error-msg").text("You can't send a blank tweet!");
-      $('#new-tweet-submission')[0].reset();
-      $("output").css({color: "black"});
       return;
     };
     if (textLength > 140) {
       event.preventDefault();
-      // If the text length is > 140 when you hit submit, erase the field
+      // If the text length is > 140 when you hit submit, shoot error
       $(".error-msg").text("You can't send a tweet containing over 140 characters!");
       $("main.container > .error-container").slideDown();
-      $('#new-tweet-submission')[0].reset();
-      $("output").css({color: "black"});
       return;
     }
 
@@ -90,6 +82,8 @@ $(document).ready(function() {
       url: "/tweets",
       data: $(event.target).serialize(),
       success: () => {
+        let counterElement = $('#tweet-text').siblings("div").children(".counter");
+      counterElement.text("140");
         loadTweets();
       },
     });
