@@ -42,11 +42,10 @@ article > p {
   justify-content: flex-start;
   color: black;
   margin: 1.5rem;
-  width: auto;
+  width: 95%;
   height: auto;
   border-bottom: 2px solid #1f1e1e;
   overflow-wrap: anywhere;
-  
 }
 
 /* Bottom of the tweet, should contain the symbols that have mouse-hover events. Retweet/like/etc. */
